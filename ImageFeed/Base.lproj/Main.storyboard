@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="FGj-JQ-UpA">
-                                                    <rect key="frame" x="16" y="7" width="361" height="86"/>
+                                                    <rect key="frame" x="16" y="4" width="361" height="92"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -39,7 +39,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMa-CB-0rd">
-                                                    <rect key="frame" x="333" y="7" width="44" height="44"/>
+                                                    <rect key="frame" x="333" y="4" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="S0F-1A-GZM"/>
                                                         <constraint firstAttribute="width" constant="44" id="fLM-3i-9hQ"/>
@@ -51,8 +51,8 @@
                                                     </state>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 августа 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSU-rc-4dF">
-                                                    <rect key="frame" x="24" y="64" width="361" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="24" y="72.333333333333329" width="361" height="15.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -60,16 +60,17 @@
                                             <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="FGj-JQ-UpA" firstAttribute="leading" secondItem="aSW-vg-yDh" secondAttribute="leading" constant="16" id="24W-Xl-l36"/>
-                                                <constraint firstItem="FGj-JQ-UpA" firstAttribute="top" secondItem="aSW-vg-yDh" secondAttribute="topMargin" constant="-4" id="OsA-OI-q4X"/>
                                                 <constraint firstItem="FGj-JQ-UpA" firstAttribute="bottom" secondItem="hSU-rc-4dF" secondAttribute="bottom" constant="8" id="P7k-59-1dS"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="FGj-JQ-UpA" secondAttribute="bottom" constant="-4" id="Z6f-dJ-0N0"/>
+                                                <constraint firstItem="FGj-JQ-UpA" firstAttribute="top" secondItem="aSW-vg-yDh" secondAttribute="top" constant="4" id="Qqr-pl-Cme"/>
                                                 <constraint firstItem="HMa-CB-0rd" firstAttribute="trailing" secondItem="FGj-JQ-UpA" secondAttribute="trailing" id="ghb-se-6J9"/>
                                                 <constraint firstItem="HMa-CB-0rd" firstAttribute="top" secondItem="FGj-JQ-UpA" secondAttribute="top" id="gsL-ze-oVx"/>
                                                 <constraint firstItem="hSU-rc-4dF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FGj-JQ-UpA" secondAttribute="trailing" constant="8" id="vAj-zG-kPc"/>
+                                                <constraint firstAttribute="bottom" secondItem="FGj-JQ-UpA" secondAttribute="bottom" constant="4" id="x0y-D3-IVg"/>
                                                 <constraint firstItem="hSU-rc-4dF" firstAttribute="leading" secondItem="FGj-JQ-UpA" secondAttribute="leading" constant="8" id="yEK-ov-aFk"/>
                                                 <constraint firstAttribute="trailing" secondItem="FGj-JQ-UpA" secondAttribute="trailing" constant="16" id="zRs-Tu-A2I"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="cellImage" destination="FGj-JQ-UpA" id="X8k-hu-FWt"/>
                                             <outlet property="dateLabel" destination="hSU-rc-4dF" id="4y7-c4-P1y"/>
