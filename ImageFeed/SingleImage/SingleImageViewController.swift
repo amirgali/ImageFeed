@@ -21,14 +21,17 @@ final class SingleImageViewController: UIViewController {
         present(share, animated: true, completion: nil)
     }
     
-    var image: UIImage? {
+    private var image: UIImage? {
           didSet {
               guard isViewLoaded, let image else { return }
-              imageView.image = image
               imageView.frame.size = image.size
               rescaleAndCenterImageInScrollView(image: image)
           }
       }
+    
+    func setImage(_ image: UIImage?) {
+        self.image = image
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +52,10 @@ final class SingleImageViewController: UIViewController {
         view.layoutIfNeeded()
         let visibleRectSize = scrollView.bounds.size
         let imageSize = image.size
-        let hScale = visibleRectSize.width / imageSize.width
-        let vScale = visibleRectSize.height / imageSize.height
-        let scale = max(min(maxZoomScale, max(hScale, vScale)), minZoomScale)
+        let hScale = imageSize.width != 0 ? visibleRectSize.width / imageSize.width : 1.0
+        let vScale = imageSize.height != 0 ? visibleRectSize.height / imageSize.height : 1.0
+//        let scale = max(min(maxZoomScale, max(hScale, vScale)), minZoomScale)
+        let scale = min(maxZoomScale, max(minZoomScale, min(hScale, vScale)))
 
         scrollView.setZoomScale(scale, animated: false)
         scrollView.layoutIfNeeded()

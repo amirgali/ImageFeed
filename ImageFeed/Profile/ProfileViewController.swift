@@ -41,7 +41,7 @@ final class ProfileViewController: UIViewController {
     private func configureLogoutButton() {
         logoutButton = UIButton(type: .system)
         logoutButton.setImage(UIImage(named: "exit"), for: .normal)
-        logoutButton.tintColor = UIColor(red: 245/255, green: 107/255, blue: 108/255, alpha: 1.0)
+        logoutButton.tintColor = UIColor(named: "LogoutButtonColor")
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoutButton)
         
@@ -55,7 +55,7 @@ final class ProfileViewController: UIViewController {
         nameLabel = UILabel()
         nameLabel.text = "Екатерина Новикова"
         nameLabel.font = UIFont.systemFont(ofSize: 23, weight: .bold)
-        nameLabel.textColor = .white
+        nameLabel.textColor = UIColor(named: "NameLabel")
         let attributedString = NSMutableAttributedString(string: nameLabel.text ?? "")
         attributedString.addAttribute(.kern, value: -0.08, range: NSRange(location: 0, length: attributedString.length))
         nameLabel.attributedText = attributedString
@@ -72,7 +72,7 @@ final class ProfileViewController: UIViewController {
         loginNameLabel = UILabel()
         loginNameLabel.text = "@ekaterina_nov"
         loginNameLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        loginNameLabel.textColor = UIColor(red: 174/255, green: 175/255, blue: 180/255, alpha: 1.0)
+        loginNameLabel.textColor = UIColor(named: "LoginNameLabel")
         loginNameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loginNameLabel)
         
@@ -86,7 +86,7 @@ final class ProfileViewController: UIViewController {
         descriptionLabel = UILabel()
         descriptionLabel.text = "Hello, world!"
         descriptionLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        descriptionLabel.textColor = .white
+        descriptionLabel.textColor = UIColor(named: "DescriptionLabel")
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(descriptionLabel)
         

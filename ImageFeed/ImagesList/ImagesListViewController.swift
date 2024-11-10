@@ -39,7 +39,7 @@ final class ImagesListViewController: UIViewController {
                 }
 
                 let image = UIImage(named: photosName[indexPath.row])
-                viewController.image = image
+                viewController.setImage(image)
             } else {
                 super.prepare(for: segue, sender: sender)
             }
@@ -52,13 +52,10 @@ extension ImagesListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIndetifier, for: indexPath)
-        
         guard let imageListCell = cell as? ImagesListCell else {
             return UITableViewCell()
         }
-        
         configCell(for: imageListCell, with: indexPath)
         return imageListCell
     }
